@@ -77,6 +77,7 @@ EOSQL
 
     ## V. Inserir dados de teste - Opcional ) (não necessário para produção)
     #psql -v ON_ERROR_STOP=1 -d "host=localhost port=5432 dbname=$database user=$POSTGRESQL_USERNAME" -W "$POSTGRESQL_PASSWORD" -a -q -f /docker-entrypoint-initdb.d/pgd-sqls/e_inserir_dados_teste_opcional.sql
+    
 
     ## VI. Funcoes PostgreSQL - Obrigatorio
     psql -v ON_ERROR_STOP=1 -d "host=localhost port=5432 dbname=$database user=$POSTGRESQL_USERNAME" -W "$POSTGRESQL_PASSWORD" -a -q -f /docker-entrypoint-initdb.d/pgd-sqls/f_funcoes_postgresql_obrigatorio.sql
